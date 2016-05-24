@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9_-]+).html index.php?$1
+RewriteRule ^ticket/([0-9_-]+)/$ index.php?ticket=$1
+RewriteRule ^ticket/([0-9_-]+)/delete/thread/([0-9_-]+)/$ index.php?ticket=$1&delete_thread=$2
+RewriteRule ^ticket/([0-9_-]+)/close/$ index.php?ticket=$1&close
+RewriteRule ^delete/attachment/$ index.php?delete_attachment
+RewriteRule ^admin/$ index.php?admin
+RewriteRule ^admin/delete/(.*?)/$ index.php?admin&name=$1&delete
+RewriteRule ^admin/([0-9_-]+)/(.*?).php$ index.php?admin&$2&page=$1
+RewriteRule ^admin/(.*?).php$ index.php?admin&$1
